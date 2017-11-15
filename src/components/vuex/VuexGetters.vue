@@ -25,15 +25,16 @@
               <button class="button is-danger">Delete</button>
             </th>
           </tr>
-
         </tbody>
       </table>
+      <VuexMutations />
     </div>
   </div>
 </template>
 
 <script>
 import {mapGetters} from 'vuex'
+import VuexMutations from './VuexMutations.vue'
 export default {
   name: 'VText',
   data () {
@@ -45,6 +46,9 @@ export default {
     ...mapGetters([
       'adultUser'
     ])
+  },
+  components: {
+    VuexMutations
   }
 }
 </script>

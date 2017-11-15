@@ -4,10 +4,12 @@ import state from './state'
 import getters from './getters'
 import mutations from './mutations'
 import actions from './actions'
+import VuetronVuex from 'vuetron-vuex'
 Vue.use(Vuex)
 export const store = new Vuex.Store({
   state: state,
   getters: getters,
   mutations: mutations,
-  actions: actions
+  actions: actions,
+  plugins: [VuetronVuex()]
 })
